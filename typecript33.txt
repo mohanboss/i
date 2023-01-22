@@ -1,0 +1,21 @@
+typescript istallation
+
+-->npm i -g typescript
+
+----->(filename)variable.ts
+const a="hello";
+console.log(a)
+
+
+
+const b=20;
+
+if(b>18){
+    console.log("your eligible to vote")
+}
+else{
+    console.log("you are not 18 years old")
+}
+
+---->to run
+node variable.ts

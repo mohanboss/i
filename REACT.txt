@@ -1,0 +1,182 @@
+REACT APP INSTALLATION 
+
+
+npx create-react-app my-app
+
+CREATE FOLDER IN SRC COMPONENT INSIDE HWADER.JS
+
+import React from 'react'
+
+function Header() {
+  return (
+    <>
+  <nav className="navbar navbar-inverse">
+    <div className="container-fluid">
+      <div className="navbar-header">
+        <a className="navbar-brand" href="#">
+          shopping cart
+        </a>
+      </div>
+      <ul className="nav navbar-nav">
+        <li className="active">
+          <a href="/">Home</a>
+        </li>
+        <li className="dropdown">
+          <a className="dropdown-toggle" data-toggle="dropdown" href="About">
+            About<span className="caret" />
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a href="About">about</a>
+            </li>
+            
+           
+          </ul>
+        </li>
+    
+      </ul>
+      <ul className="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">
+            <span className="glyphicon glyphicon-user" /> Sign Up
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span className="glyphicon glyphicon-log-in" /> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div className="container">
+    <h3>Right Aligned Navbar</h3>
+    <p>
+      The .navbar-right class is used to right-align navigation bar buttons.
+    </p>
+  </div>
+</>
+
+  )
+}
+
+export default Header;
+
+
+
+
+
+
+
+
+
+--->INSIDE SRC CREATE PAGE INSIDE FILE ABOUT.JS
+
+
+
+import React from 'react';
+
+function About() {
+  return (
+    <div>
+      <h1>hello about</h1>
+    </div>
+  )
+}
+
+export default About;
+
+
+
+
+
+
+
+
+
+HOME.JS
+
+
+import React from 'react'
+
+function Home() {
+  return (
+    <div>
+      <h1>hello home</h1>
+    </div>
+  )
+}
+
+export default Home
+
+
+
+
+APP.JS
+import logo from './logo.svg';
+import './App.css';
+import Header from './component/Header';
+import About from './Pages/About';
+import Home from './Pages/Home';
+import {Routes,Route} from 'react-router-dom';
+
+function App() {
+  return (
+    <div className="App">
+      <Header></Header>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path ='/about' element={<About/>}/>
+
+
+
+      </Routes>
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+INDEX.JS
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+
+
+
+INDEX.HTML
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
+
+
+
+
+
+
